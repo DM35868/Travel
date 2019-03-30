@@ -6,6 +6,9 @@ import router from './router'
 import './assets/css/reset.css'
 // 引入后用于解决移动端出现1像素边框的问题
 import './assets/css/border.css'
+// 引入fastclick
+import fastClick from 'fastclick'
+fastClick.attach(document.body)
 
 Vue.config.productionTip = false
 
