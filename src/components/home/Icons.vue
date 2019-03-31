@@ -20,13 +20,12 @@ export default {
         return {
             IconsList:[
                 {id:1,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',dec:'常见景点'},
-                {id:2,imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',dec:'常见景点'},
-                {id:3,imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',dec:'常见景点'},
-                {id:4,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',dec:'常见景点'},
+                {id:2,imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',dec:'珠海游'},
+                {id:3,imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',dec:'海岛游'},
+                {id:4,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',dec:'港澳游'},
                 {id:5,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',dec:'常见景点'},
                 {id:6,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',dec:'常见景点'},
                 {id:7,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',dec:'常见景点'},
-                {id:8,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',dec:'常见景点'},
                 {id:8,imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',dec:'常见景点'},
             ]
         }
