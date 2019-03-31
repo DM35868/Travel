@@ -8,6 +8,9 @@
 #### 软件架构
 软件架构说明
 
+1.轮播图使用vue-awesome-swiper@2.6.7
+2.style处理器使用stylus
+
 
 #### 安装教程
 

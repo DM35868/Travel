@@ -1,15 +1,18 @@
 <template>
      <div class="home">
           <Header></Header>
-          <h1>我是内页</h1>
+          <Swiper></Swiper>
+          <Icons></Icons>
      </div>     
 </template>
 <script>
 import Header from './Header.vue'
+import Swiper from './Swiper.vue'
+import Icons from './Icons.vue'
 export default {
      name:'home',
      components:{
-          Header
+          Header,Swiper,Icons
      }
 }
 </script>

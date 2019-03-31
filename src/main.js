@@ -6,10 +6,14 @@ import './assets/css/reset.css'
 import './assets/css/border.css'
 // 引入字体CSS
 import './assets/icon/iconfont.css'
+// 引入vue-awesome-swiper插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 // 引入fastclick
 import fastClick from 'fastclick'
-fastClick.attach(document.body)
 
+fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
