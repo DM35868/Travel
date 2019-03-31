@@ -15,10 +15,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~@/assets/css/varibles.styl';
  .header {
   height: 0.86rem;
   width: 100%;
-  background: #00bcd4;
+  background: $bgColor;
   display: flex;
   color: #fff;
   align-items: center;
@@ -54,6 +55,8 @@ export default {
     }
   }
   .header-right {
+    height: 100%;
+    line-height :0.8rem;
     text-align: center;
     min-width: 1.04rem;
     padding: 0 0.1rem;
