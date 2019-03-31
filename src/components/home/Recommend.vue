@@ -17,13 +17,11 @@
 <script>
 export default {
     name:'Recommend',
+    props:{
+        recommendList:Array
+    },
     data () {
         return {
-            recommendList:[
-                {id:'1',imgUrl:'https://imgs.qunarzz.com/p/tts1/1805/87/4980e508f998c802.jpg_r_240x160x90_cf2ae404.jpg',title:'珠海一日游',desc:'珠海好玩好吃，带你玩转大珠海，开心一夏。'},
-                {id:'2',imgUrl:'https://imgs.qunarzz.com/p/tts1/1805/87/4980e508f998c802.jpg_r_240x160x90_cf2ae404.jpg',title:'珠海一日游',desc:'珠海好玩好吃，带你玩转大珠海，开心一夏。'},
-                {id:'3',imgUrl:'https://imgs.qunarzz.com/p/tts1/1805/87/4980e508f998c802.jpg_r_240x160x90_cf2ae404.jpg',title:'珠海一日游',desc:'珠海好玩好吃，带你玩转大珠海，开心一夏。'}
-            ]
         }
     }
 

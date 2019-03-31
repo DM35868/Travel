@@ -7,7 +7,6 @@
                 <div class="weekend-bottom">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">{{item.desc}}</p>
-                    <button class="item-button">查看详情</button>
                 </div>
             </router-link>
         </ul>
@@ -17,13 +16,11 @@
 <script>
 export default {
     name:'Weekend',
+    props:{
+        weekendList:Array
+    },
     data () {
         return {
-            weekendList:[
-                {id:'1',imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/892f011c3b7bd6815b460c659acc5651.jpg_750x200_e2242cfb.jpg',title:'珠海一日游',desc:'珠海好玩好吃，带你玩转大珠海，开心一夏。'},
-                {id:'2',imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/892f011c3b7bd6815b460c659acc5651.jpg_750x200_e2242cfb.jpg',title:'珠海一日游',desc:'珠海好玩好吃，带你玩转大珠海，开心一夏。'},
-                {id:'3',imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/892f011c3b7bd6815b460c659acc5651.jpg_750x200_e2242cfb.jpg',title:'珠海一日游',desc:'珠海好玩好吃，带你玩转大珠海，开心一夏。'}
-            ]
         }
     }
 
@@ -50,7 +47,6 @@ export default {
         .weekend-bottom{
             padding: 0.1rem;
             min-width: 0;
-            margin-bottom: .2em;
             .item-title{
                 line-height:0.64rem;
                 font-size: 0.32rem;
@@ -60,14 +56,6 @@ export default {
                 color: #666;
                 line-height: 0.4rem;
                 ellipsis();
-            }
-            .item-button{
-                line-height:0.44rem;
-                margin-top :0.16rem;
-                background-color: #ff9300;
-                padding: 0 0.2rem;
-                border-radius :0.06rem;
-                color: #fff;
             }
         }
     }
