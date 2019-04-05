@@ -4,7 +4,9 @@
         <div class="header-input">
             <span class="travel-iconfont iconsousuo"></span><input type="text" placeholder="输入城市/景点/游玩主题">
         </div>
-        <div class="header-right">{{city}}<span class="travel-iconfont iconxiajiantou"></span></div>
+        <router-link to="/city">
+           <div class="header-right">{{city}}<span class="travel-iconfont iconxiajiantou"></span></div>
+        </router-link>
     </div>
 </template>
 
@@ -20,7 +22,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~@/assets/css/varibles.styl';
  .header {
-  height: 0.86rem;
+  height: $headerHight;
   width: 100%;
   background: $bgColor;
   display: flex;
@@ -63,6 +65,7 @@ export default {
     text-align: center;
     min-width: 1.04rem;
     padding: 0 0.1rem;
+    color:#fff;
     .arrow-bottom {
       font-size: 0.24rem;
     }

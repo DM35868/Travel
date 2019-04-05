@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~@/assets/css/varibles.styl';
     .icons{
         width:100%;
         height:0;
