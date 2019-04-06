@@ -29,8 +29,6 @@ export default {
   color: #fff;
   align-items: center;
   .header-left {
-    width: 0.64rem;
-    text-align: center;
     .iconfanhui {
       font-size: 0.4rem;
       margin-left : 0.2rem;
@@ -38,7 +36,8 @@ export default {
   }
   .header-input {
     flex: 1;
-    height: 0.64rem;
+    height: .64rem;
+    line-height: .64rem;
     background: #eee;
     border-radius: 0.1rem;
     margin-left: 0.2rem;

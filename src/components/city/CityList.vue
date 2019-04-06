@@ -13,52 +13,16 @@
             <div class="area">
                 <div class="title border-topbottom">热门城市</div>
                 <div class="button-list">
-                    <div class="button-wrapper">
-                        <div class="button-item">北京</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button-item">北京</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button-item">北京</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button-item">北京</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button-item">北京</div>
+                    <div class="button-wrapper" v-for="item in hotCities" :key="item.id">
+                        <div class="button-item">{{item.name}}</div>
                     </div>
                 </div>
             </div>
 
-            <div class="area">
-                <div class="title">A</div>
+            <div class="area" v-for="(item,key) in cities" :key="key" :ref="key">
+                <div class="title">{{key}}</div>
                 <div class="city-list">
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
-                    <div class="city-item border-bottom">阿拉加斯加</div>
+                    <div class="city-item border-bottom" v-for="items in item" :key="items.id">{{items.name}}</div>
                 </div>
             </div>
         </div>
@@ -70,9 +34,23 @@
 import Bscroll from 'better-scroll'
 export default {
     name:"CityList",
+    props:{
+        hotCities:Array,
+        cities:Object,
+        letter:String
+    },
     mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
-  }
+    this.scroll = new Bscroll(this.$refs.wrapper);
+    },
+    watch:{
+        letter: function(){
+            if(this.letter){
+                const element = this.$refs[this.letter][0];
+                //调用scroll插件的一个滚动定位到该元素的方法
+                this.scroll.scrollToElement(element);
+            }
+        }
+    }
 }
 </script>
 
@@ -101,7 +79,7 @@ export default {
          .title{
              line-height:.67rem;
              background-color: #ccc;
-             padding-left:.69rem;
+             padding-left:.38rem;
          }
          .button-list{
              overflow: hidden;
