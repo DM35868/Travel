@@ -5,7 +5,7 @@
         </div>
         <div class="search-content" v-show="searchInner" ref="search">
             <ul>
-                <li v-for="item in showList" :key="item.id" class="listInner border-bottom">{{item.name}}</li>
+                <li v-for="item in showList" :key="item.id" class="listInner border-bottom" @click="handleState(item.name)">{{item.name}}</li>
                 <li v-show="hasNoData" class="listInner border-bottom">未找到符合该字段的内容</li>
             </ul>
         </div>
@@ -24,6 +24,12 @@ export default {
             searchInner:'',
             showList:[],
             timer:null
+        }
+    },
+    methods:{
+        handleState(city){
+            this.$store.dispatch('changState',city);
+            this.$router.push('/');
         }
     },
     computed:{

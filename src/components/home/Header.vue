@@ -5,7 +5,7 @@
             <span class="travel-iconfont iconsousuo"></span><input type="text" placeholder="输入城市/景点/游玩主题">
         </div>
         <router-link to="/city">
-           <div class="header-right">{{city}}<span class="travel-iconfont iconxiajiantou"></span></div>
+           <div class="header-right">{{this.$store.state.city}}<span class="travel-iconfont iconxiajiantou"></span></div>
         </router-link>
     </div>
 </template>

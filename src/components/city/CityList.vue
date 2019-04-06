@@ -5,7 +5,7 @@
                 <div class="title border-topbottom">当前城市</div>
                 <div class="button-list">
                     <div class="button-wrapper">
-                        <div class="button-item">北京</div>
+                        <div class="button-item">{{this.$store.state.city}}</div>
                     </div>
                 </div>
             </div>
@@ -14,7 +14,7 @@
                 <div class="title border-topbottom">热门城市</div>
                 <div class="button-list">
                     <div class="button-wrapper" v-for="item in hotCities" :key="item.id">
-                        <div class="button-item">{{item.name}}</div>
+                        <div class="button-item" @click="handleState(item.name)">{{item.name}}</div>
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="area" v-for="(item,key) in cities" :key="key" :ref="key">
                 <div class="title">{{key}}</div>
                 <div class="city-list">
-                    <div class="city-item border-bottom" v-for="items in item" :key="items.id">{{items.name}}</div>
+                    <div class="city-item border-bottom" v-for="items in item" :key="items.id" @click="handleState(items.name)">{{items.name}}</div>
                 </div>
             </div>
         </div>
@@ -38,6 +38,12 @@ export default {
         hotCities:Array,
         cities:Object,
         letter:String
+    },
+    methods:{
+        handleState(city){
+            this.$store.dispatch('changState',city);
+            this.$router.push('/');
+        }
     },
     mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper);
