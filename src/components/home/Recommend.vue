@@ -2,7 +2,7 @@
     <div class="Recommend">
         <div class="recommend-title">热销推荐</div>
         <ul>
-            <router-link tag="li" class="recommend-info border-bottom" to="/" v-for="(item,key) in recommendList" :key="key">
+            <router-link tag="li" class="recommend-info border-bottom" :to="'/detail/' + item.id" v-for="(item,key) in recommendList" :key="key">
                 <img :src="item.imgUrl" class="recommend-left">
                 <div class="recommend-right">
                     <p class="item-title">{{item.title}}</p>
@@ -37,7 +37,7 @@ export default {
         margin-top: .1rem;
     }
     .recommend-info{
-        display:flex; 
+        display:flex;
         .recommend-left{
             width: 1.7rem;
             height: 1.7rem;
