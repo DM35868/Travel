@@ -8,6 +8,7 @@
             </div>
         </div>
         <gallery v-show="showStatus" @close="closeImgs"></gallery>
+        <div></div>
     </div>
 </template>
 
@@ -36,6 +37,7 @@ export default {
 
 <style lang="stylus" scoped>
     .banner-box{
+        position relative;
         .banner{
             position: relative;
             overflow: hidden;
