@@ -44,7 +44,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        z-index:99;
+        z-index:199;
         background-color #000;
         position: fixed;
         top:0;
