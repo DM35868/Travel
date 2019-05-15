@@ -32,9 +32,7 @@ export default {
             if(top > 60){
                 let opacity = top / 140;
                 opacity = opacity > 1 ? 1 : opacity;
-                this.opacityStyle = {
-                    opacity
-                }
+                this.opacityStyle = { opacity }
                 this.headerShow = false;
             }else{
                 this.headerShow = true;
